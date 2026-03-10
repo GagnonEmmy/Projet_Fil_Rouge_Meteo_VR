@@ -10,6 +10,11 @@ public class WeatherAPI : MonoBehaviour
     public float celsiusTemp;
     public string conditionTemp;
 
+    private void Start()
+    {
+        StartCoroutine(GetWeather());
+    }
+
     public IEnumerator GetWeather()
     {
         string url = $"https://api.weatherapi.com/v1/current.json?key={apiKey}&q={city}";
