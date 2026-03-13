@@ -14,4 +14,9 @@ public class WeatherUI : MonoBehaviour
 
         temperatureText.text = weatherAPI.celsiusTemp + " °C";
     }
+
+    public void HideTemperature()
+    {
+        window.SetActive(false);
+    }
 }
